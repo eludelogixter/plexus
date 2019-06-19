@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="brood.com.medcrawler.AdminKeyGen">
+    <item
+        android:id="@+id/admin_key_gen_action_about"
+        android:orderInCategory="100"
+        android:title="@string/admin_key_gen_action_about_txt"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/admin_key_gen_action_logout"
+        android:orderInCategory="100"
+        android:title="@string/admin_key_gen_action_logout_txt"
+        app:showAsAction="never" />
+</menu>

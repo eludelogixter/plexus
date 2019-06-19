@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455A64</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorLightPrimary">#CFD8DC</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+    <color name="listDeviderColor">#B6B6B6</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorRed">#F44336</color>
+    <color name="colorRedDark">#D50000</color>
+    <color name="colorZebraRecycle">#ECEFF1</color>
+    <color name="colorSelectMultiOption">#FF8A1E</color>
+    <color name="colorCustomW">#90A4AE</color>
+</resources>

@@ -1,0 +1,1246 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="brood.com.medcrawler.AdminAddUser">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar" />
+
+    <brood.com.medcrawler.UsrRegScrollV
+        android:id="@+id/user_reg_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/cards_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Personal Information"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/personal_info_input_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp">
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/usr_prof_photo_cv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:elevation="6dp"
+                                android:padding="6dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/usr_prof_photo_lay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorZebraRecycle"
+                                    android:gravity="center_horizontal"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/usr_prof_usrimg"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@drawable/camera_photo" />
+
+                                </RelativeLayout>
+                            </android.support.v7.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/fname_edittext"
+                                android:layout_toRightOf="@+id/usr_prof_photo_cv"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/name_icon" />
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/admin_addUser_firstname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/admin_addUser_firstname_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="First Name"
+                                        android:inputType="textCapWords"
+                                        android:singleLine="true"
+                                        android:textSize="16sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/usr_prof_photo_cv"
+                                android:layout_marginLeft="10dp"
+                                android:layout_below="@+id/fname_edittext"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/name_icon" />
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/admin_addUser_lastname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true">
+
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/admin_addUser_lastname_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Last Name"
+                                        android:inputType="textCapWords"
+                                        android:singleLine="true"
+                                        android:textSize="16sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/address_icon" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/admin_addUser_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/admin_addUser_address_edit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Address (optional)"
+                                    android:inputType="textCapWords"
+                                    android:singleLine="true"
+                                    android:textSize="16sp" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/city_icon" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/admin_addUser_city"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/admin_addUser_city_edit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="City"
+                                    android:inputType="textCapWords"
+                                    android:singleLine="true"
+                                    android:textSize="16sp" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/admin_addUser_zip"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/admin_addUser_zip_edit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Zip (optional)"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:singleLine="true"
+                                    android:textSize="16sp" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/admin_add_institution_layout"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/institution" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/admin_addUser_institution"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/admin_addUser_institution_edit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Institution Name"
+                                    android:inputType="textCapWords"
+                                    android:singleLine="true"
+                                    android:textSize="16sp" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="17dp"
+                                android:src="@drawable/state_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:layout_marginRight="24dp"
+                                android:text="State/Prov:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/admin_addUser_sor_w"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@drawable/buttonselector"
+                                android:singleLine="true"
+                                android:tag="sel_sor_widget"
+                                android:layout_marginRight="4dp"
+                                android:text="select"
+                                android:textColor="@color/colorWhite">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Login Information"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/login_info_input_fields"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/email_icon" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/admin_addUser_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/admin_addUser_email_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Email Address"
+                                        android:inputType="textEmailAddress"
+                                        android:singleLine="true"
+                                        android:textSize="16sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <ProgressBar
+                                    android:id="@+id/email_check_pbar"
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_marginTop="24dp"
+                                    android:indeterminateDrawable="@drawable/custom_progress_bar"
+                                    android:max="100"
+                                    android:progress="20" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="17dp"
+                                android:src="@drawable/password_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:layout_marginRight="24dp"
+                                android:text="Reset Password:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/admin_reset_pass_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@drawable/buttonselector"
+                                android:singleLine="true"
+                                android:tag="sel_sor_widget"
+                                android:layout_marginRight="4dp"
+                                android:text="Reset"
+                                android:textColor="@color/colorWhite">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Professional Information"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/prof_info_input_fields"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/user_cat_layout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/user_category_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="36dp"
+                                android:singleLine="true"
+                                android:text="User Category:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_usercat_widget"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:tag="admin_addUser_usercat_widget"
+                                android:textColor="@color/colorWhite">
+
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="35dp"
+                                android:singleLine="true"
+                                android:text="User Specialty:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/del_sub_spec_widget"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@drawable/buttonselector"
+                                android:tag="del_sub_spec_widget"
+                                android:text="select"
+                                android:layout_marginRight="4dp"
+                                android:textColor="@color/colorWhite" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="33dp"
+                                android:singleLine="true"
+                                android:text="User Subspec: "
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/sel_sub_spec_widget"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@drawable/buttonselector"
+                                android:singleLine="true"
+                                android:tag="sel_sub_spec_widget"
+                                android:text="select"
+                                android:layout_marginRight="4dp"
+                                android:textColor="@color/colorWhite" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/soi_layout"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="22dp"
+                                android:singleLine="true"
+                                android:text="State of Interest:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/admin_addUser_soi_w"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@drawable/buttonselector"
+                                android:singleLine="true"
+                                android:tag="sel_soi_widget"
+                                android:text="select"
+                                android:layout_marginRight="4dp"
+                                android:textColor="@color/colorWhite">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/checkbox_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="6dp" >
+
+                <LinearLayout
+                    android:id="@+id/other_input_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_clerkship_south"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:tag="need_clerkship"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_need_clerkship"
+                            android:background="@drawable/arrow_red"
+                            android:layout_centerVertical="true"
+                            android:tag="need_clerkship"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_clerckship_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_need_clerkship"
+                            android:button="@drawable/checkbox"
+                            android:text="I'm interested in a clerkship position"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_clerkship"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/admin_addUser_clerckship_ckbox"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_clerkship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_res_south"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="need_residency"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:id="@+id/arrow_need_residency"
+                            android:tag="need_residency"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_residency_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_need_residency"
+                            android:button="@drawable/checkbox"
+                            android:text="I'm interested in a residency position"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_residency"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/admin_addUser_residency_ckbox"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_residency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_fellowship_south"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="need_fellowship"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_need_fellowship"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="need_fellowship"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_fellow_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/arrow_need_fellowship"
+                            android:layout_marginRight="25dp"
+                            android:button="@drawable/checkbox"
+                            android:text="I'm interested in a fellowship position"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_fellowship"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/admin_addUser_fellow_ckbox"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_fellowship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_job_south"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="need_job"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_need_job"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="need_job"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_job_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/arrow_need_job"
+                            android:layout_marginRight="25dp"
+                            android:button="@drawable/checkbox"
+                            android:text="I'm interested in a job"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_job"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/admin_addUser_job_ckbox"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_job"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_haveclerkship_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="have_clerkship"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_offer_clerkship"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="have_clerkship"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_hostckship_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_offer_clerkship"
+                            android:button="@drawable/checkbox"
+                            android:text="I have clerkship position(s) available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_offer_clerkship"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/admin_addUser_hostckship_ckbox"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_offer_clerkship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_haveres_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="have_residency"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_offer_residency"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="have_residency"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_haveres_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_offer_residency"
+                            android:button="@drawable/checkbox"
+                            android:text="I have residency position(s) available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_offer_residency"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/admin_addUser_haveres_ckbox"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_offer_residency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_havefellow_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="have_fellow"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_offer_fellowship"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="have_fellow"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_havefellow_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_offer_fellowship"
+                            android:button="@drawable/checkbox"
+                            android:text="I have fellowship position(s) available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_offer_fellowship"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/admin_addUser_havefellow_ckbox"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_offer_fellowship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_havejob_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="have_job"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_offer_job"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:tag="have_job"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_havejob_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_offer_job"
+                            android:button="@drawable/checkbox"
+                            android:text="I have physician job(s) available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                        <LinearLayout
+                            android:id="@+id/layout_stardate_offer_job"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/admin_addUser_havejob_ckbox"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="28dp"
+                                android:src="@drawable/arrow_mix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:singleLine="true"
+                                android:text="Starting Date:"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="16sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/admin_addUser_date_offer_job"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_assist_in_inter"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:id="@+id/arrow_host_interviewees"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/arrow_red"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_assist_residency_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_toRightOf="@+id/arrow_host_interviewees"
+                            android:button="@drawable/checkbox"
+                            android:text="I'm willing to host interviewees"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_checkbox_financial"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:tag="financial_help"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/arrow_red"
+                            android:tag="financial_help"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/need_financial_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:button="@drawable/checkbox"
+                            android:text="I need financial help relocating to the South"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/arrow_red"
+                            android:tag="admin_addUser_assist_sharedata_ckbox"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/admin_addUser_assist_sharedata_ckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:button="@drawable/checkbox_red"
+                            android:checked="true"
+                            android:text="Share my data with potential candidates"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp">
+
+                        </android.support.v7.widget.AppCompatCheckBox>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/del_button_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="6dp" >
+
+                <Button
+                    android:id="@+id/del_myaccount_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/buttonselector_red"
+                    android:text="Delete My Account"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </brood.com.medcrawler.UsrRegScrollV>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+

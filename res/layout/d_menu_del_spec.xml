@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Specialty"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:indeterminateDrawable="@drawable/custom_progress_bar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/del_spec_progress_bar"
+            android:layout_centerVertical="true"
+            android:max="100"
+            android:progress="2"
+            android:layout_marginLeft="135dp"
+            android:layout_centerHorizontal="true" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Are you sure you want to delete"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/name_del_spec_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_name_spec_"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="* All subspecialties associated with this specialty will also be removed"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/aff_del_spec_btn"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:background="@drawable/buttonselector"
+            android:singleLine="true"
+            android:text="@string/add_spec_btn_YES"
+            android:textColor="@color/colorWhite" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/neg_del_spec_btn"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/buttonselector"
+            android:singleLine="true"
+            android:text="@string/add_spec_btn_NO"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

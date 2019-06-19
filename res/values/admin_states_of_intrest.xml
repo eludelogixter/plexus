@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="states_of_interest">
+        <item>Alabama</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Kentucky</item>
+        <item>Missouri</item>
+        <item>North Carolina</item>
+        <item>South Carolina</item>
+        <item>Tennessee</item>
+    </string-array>
+</resources>

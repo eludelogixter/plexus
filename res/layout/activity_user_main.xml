@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="brood.com.medcrawler.UserMain">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar" />
+
+    <ProgressBar
+        android:id="@+id/search_progressbar"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="322dp"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/custom_progress_bar"
+        android:max="100"
+        android:progress="2"
+        android:translationZ="1dp"
+        android:visibility="gone" />
+
+    <brood.com.medcrawler.WrappingSlidingDrawer
+        android:id="@+id/search_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_below="@id/toolbar"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:rotation="180">
+
+        <RelativeLayout
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:rotation="180">
+
+            <ImageView
+                android:id="@+id/handle_image"
+                android:layout_width="150dp"
+                android:layout_height="22dp"
+                android:background="@drawable/handle_shape_selector"
+                android:text="Search" />
+
+            <TextView
+                android:id="@+id/handle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:text="@string/search_btn"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:rotation="180" >
+
+            <RelativeLayout
+                android:id="@+id/search_slider_userinterest_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/search_slider_userinterest_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:text=" * Position:"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/search_slider_userinterest_widget"
+                    android:layout_width="180dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonselector"
+                    android:tag="admin_addUser_usercat_widget"
+                    android:text="tap to select"
+                    android:textColor="@color/colorWhite" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_slider_userspec_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/search_slider_userspec_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:text=" * Specialty:"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/search_slider_userspec_widget"
+                    android:layout_width="180dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonselector"
+                    android:tag="admin_addUser_usercat_widget"
+                    android:text="tap to select"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_slider_usersubspec_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/search_slider_usersubspec_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:text="Subspecialty:"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/search_slider_usersubspec_widget"
+                    android:layout_width="180dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonselector"
+                    android:tag="admin_addUser_usercat_widget"
+                    android:text="all"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_slider_user_stateinterest_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/search_slider_state_interest_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:text="State of Interest:"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/search_slider_state_interest_widget"
+                    android:layout_width="180dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonselector"
+                    android:tag="admin_addUser_usercat_widget"
+                    android:text="all"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_slider_userstartdate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/search_slider_start_date_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:text="Start Date:"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/search_slider_start_date_widget"
+                    android:layout_width="180dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonselector"
+                    android:tag="admin_addUser_usercat_widget"
+                    android:text="all"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/search_user_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_strgh_selector"
+                android:text="Search Users"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+    </brood.com.medcrawler.WrappingSlidingDrawer>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_main_all_lay"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/empty_searchlist_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/search_error_icon"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/no_results" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_error_icon"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="No Results"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

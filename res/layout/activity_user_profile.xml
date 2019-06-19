@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="brood.com.medcrawler.UserProfile">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar" />
+
+    <ProgressBar
+        android:id="@+id/usrprof_progressbar"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/custom_progress_bar"
+        android:max="100"
+        android:progress="2"
+        android:visibility="gone" />
+
+    <brood.com.medcrawler.UsrRegScrollV
+        android:id="@+id/user_reg_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/father_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/usr_prof_email_cv"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/usr_prof_photo_cv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:elevation="6dp">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_usrimg"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/camera_photo" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/separator_line"
+                        android:layout_width="1dp"
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/usr_prof_photo_cv"
+                        android:alpha="0.4"
+                        android:src="@color/listDeviderColor" />
+
+                    <ImageView
+                        android:id="@+id/separator_horizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/usr_prof_usrlname"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/usr_prof_photo_cv"
+                        android:alpha="0.4"
+                        android:src="@color/listDeviderColor" />
+
+                    <TextView
+                        android:id="@+id/usr_prof_usrfname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/usr_prof_usrlname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/separator_line"
+                        android:singleLine="true"
+                        android:text="First Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/usr_prof_usrlname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/separator_line"
+                        android:singleLine="true"
+                        android:text="Last Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/usr_prof_usrcat"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:layout_below="@+id/separator_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/separator_line"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:text="Empty Cat"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/usr_prof_email_spec_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usr_prof_email_cv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="6dp">
+
+                <RelativeLayout
+                    android:id="@+id/email_and_rest_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/fname_lname_lay"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_pro_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_pro_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/medical_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_spec_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_pro_icon"
+                            android:singleLine="true"
+                            android:text="empty specialty"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_pro_sub_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/usr_prof_pro_layout">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_pro_sub_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/dot_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_subspec_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_pro_sub_icon"
+                            android:singleLine="true"
+                            android:text="empty subspec"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/separator_horizontal_user_sepc"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/usr_prof_pro_sub_layout"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:alpha="0.5"
+                        android:src="@color/listDeviderColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/separator_horizontal_user_sepc">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_email_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/email_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_email_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_email_icon"
+                            android:singleLine="true"
+                            android:text="empty email"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/separator_horizontal_user_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/usr_prof_email_layout"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:alpha="0.5"
+                        android:src="@color/listDeviderColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/separator_horizontal_user_email">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_address_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/address_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_address_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_address_icon"
+                            android:singleLine="true"
+                            android:text="empty address"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_city_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/usr_prof_address_layout">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_city_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/city_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_city_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_city_icon"
+                            android:singleLine="true"
+                            android:text="empty city"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_zip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/usr_prof_city_layout">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_zip_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/zipcode_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_zip_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_zip_icon"
+                            android:singleLine="true"
+                            android:text="empty zip"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/usr_prof_state_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/usr_prof_zip_layout">
+
+                        <ImageView
+                            android:id="@+id/usr_prof_state_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/us_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_state_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_state_icon"
+                            android:singleLine="true"
+                            android:text="empty state"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/usr_prof_soi_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usr_prof_email_spec_cv"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/user_prof_soi_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/user_prof_soi_icon"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/big_dot_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_soi_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/user_prof_soi_icon"
+                            android:text="State(s) of Interest: "
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/offer_soi_all_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/usr_prof_soi_txt"
+
+                            android:layout_marginTop="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/soi_alabama_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_alabama_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_alabama_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_alabama_icon"
+                                    android:text="Alabama"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_florida_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_alabama_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_florida_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_florida_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_florida_icon"
+                                    android:text="Florida"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_georgia_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_florida_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_georgia_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_georgia_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_georgia_icon"
+                                    android:text="Georgia"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_kentucky_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_georgia_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_kentucky_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_kentucky_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_kentucky_icon"
+                                    android:text="Kentucky"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_missouri_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_kentucky_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_missouri_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_missouri_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_missouri_icon"
+                                    android:text="Missouri"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_nc_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_missouri_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_nc_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_nc_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_nc_icon"
+                                    android:text="North Carolina"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_sc_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_nc_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_sc_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_sc_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_sc_icon"
+                                    android:text="South Carolina"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/soi_tn_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/soi_sc_lay"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_soi_tn_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_soi_tn_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_soi_tn_icon"
+                                    android:text="Tennessee"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/usr_prof_looking4_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usr_prof_soi_cv"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/user_prof_institution_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <ImageView
+                            android:id="@+id/user_prof_inst_icon"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/big_dot_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_irep_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/user_prof_inst_icon"
+                            android:text="I represent "
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_instname_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/usr_prof_irep_txt"
+                            android:text="Institution Name"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/user_prof_look_or_offer_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_prof_institution_lay">
+
+                        <ImageView
+                            android:id="@+id/user_prof_look_or_offer_icon"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/big_dot_icon" />
+
+                        <TextView
+                            android:id="@+id/usr_prof_look_or_offer_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/user_prof_look_or_offer_icon"
+                            android:text="I'm offering: "
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/offer_need_all_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/usr_prof_look_or_offer_txt"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/offer_need_clerkship_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_a_clerkship_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_a_clerkship_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_a_clerkship_icon"
+                                    android:text="clerkship position(s)"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_clerkship_sd_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/usr_prof_a_clerkship_txt"
+                                    android:text=", starting in 2019" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/offer_need_residency_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/offer_need_clerkship_lay"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_a_residency_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_a_residency_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_a_residency_icon"
+                                    android:text="residency position(s)"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_residency_sd_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/usr_prof_a_residency_txt"
+                                    android:text=", starting in 2019" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/offer_need_fellowship_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/offer_need_residency_lay"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_a_fellowship_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_a_fellowship_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_a_fellowship_icon"
+                                    android:text="fellowship position(s)"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_fellowship_sd_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/usr_prof_a_fellowship_txt"
+                                    android:text=", starting in 2019" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/offer_need_job_lay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/offer_need_fellowship_lay"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="25dp">
+
+                                <ImageView
+                                    android:id="@+id/user_prof_a_job_icon"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/dot_icon" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_a_job_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/user_prof_a_job_icon"
+                                    android:text="job position(s)"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/usr_prof_job_sd_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/usr_prof_a_job_txt"
+                                    android:text=", starting in 2019" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/user_prof_host_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/user_prof_look_or_offer_lay">
+
+                        <ImageView
+                            android:id="@+id/user_prof_host_icon"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/big_dot_icon" />
+
+
+                        <TextView
+                            android:id="@+id/usr_prof_host_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/user_prof_host_icon"
+                            android:text="I can host interviewees near me"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/user_prof_fin_help_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/user_prof_host_lay">
+
+                        <ImageView
+                            android:id="@+id/user_prof_fin_help_icon"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/big_dot_icon" />
+
+
+                        <TextView
+                            android:id="@+id/usr_prof_fin_help_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/user_prof_fin_help_icon"
+                            android:text="I need financial help relocating to the South"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </brood.com.medcrawler.UsrRegScrollV>
+</RelativeLayout>

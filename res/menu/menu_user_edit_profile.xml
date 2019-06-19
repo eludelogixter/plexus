@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="brood.com.medcrawler.AdminAddUser">
+
+    <item
+        android:id="@+id/usr_edit_prof_done_btn"
+        android:orderInCategory="50"
+        android:icon="@drawable/done_icon"
+        android:title="@string/usr_edit_prof_get_action_done_btn"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/usr_edit_prof_about_txt"
+        android:orderInCategory="100"
+        android:icon="@drawable/menu"
+        android:title="@string/usr_edit_prof_get_action_about_txt"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/usr_edit_prof_logout_txt"
+        android:orderInCategory="200"
+        android:title="@string/usr_edit_prof_get_action_logout_txt"
+        app:showAsAction="never" />
+
+
+</menu>
